@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-      <h1 class="hh">123456</h1>
-      <van-button type="default">默认按钮</van-button>
+      <router-view />
   </div>
 </template>
 

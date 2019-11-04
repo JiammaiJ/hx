@@ -3,9 +3,18 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import 'lib-flexible/flexible'
-import { Button } from 'vant';
+import { Icon,Swipe, SwipeItem,Popup,DropdownMenu, DropdownItem   } from 'vant';
+import { Menu,MenuItem } from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
-Vue.use(Button);
+// vant
+Vue.use(Icon );
+Vue.use(Swipe).use(SwipeItem);
+Vue.use(Popup );
+Vue.use(DropdownMenu).use(DropdownItem);
+
+// element
+Vue.use(Menu).use(MenuItem);
 
 Vue.config.productionTip = false
 
