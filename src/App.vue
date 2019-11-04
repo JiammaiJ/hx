@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <h1 class="hh">123456</h1>
+      <van-button type="default">默认按钮</van-button>
   </div>
 </template>
 
 <style lang="less">
+  .hh{
+    width:300px;
+    height:37.5px;
+    background-color:yellow;
+  }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
