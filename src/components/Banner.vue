@@ -31,8 +31,9 @@
 
 <style lang="less" scoped>
     .banner{
-        width:100%;
+        width:90%;
         height:auto;
+        margin:0 auto;
         img{
             display:block;
             width:100%;
