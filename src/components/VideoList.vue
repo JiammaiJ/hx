@@ -3,7 +3,7 @@
         <div class="vlist">
             <div v-for="(item,index) in list"
                 :key="index"
-                @click="videoPlay"
+                @click="videoPlay(item)"
             >
                 <div>
                     <img :src="item.img">
@@ -12,9 +12,10 @@
                 <p>{{item.text}}</p>
             </div>
         </div>
-        <!-- <div class="video">
-            <Video :src="list[0].videoSrc" controls autoplay></Video>
-        </div> -->
+        <div class="video" v-if="show">
+            <Video :src="videoSrc" controls :poster="videoPoster"></Video>
+            <van-icon name="cross" @click="closeVideo" />
+        </div>
         <van-overlay :show="show" />
     </div>
 </template>
@@ -32,12 +33,19 @@
                     {img:'/img/hx05.jpg',videoSrc:'/media/hx05.mp4',tit:'基于实时数据通信传输的软件平台融合技术',text:'将各种实时通讯技术融合于三维WebGIS平台，在一个平台上实现与手机端进行视频通话、语音通话、手机上报、专业监测设备数据实时上传展现、查看实时监控视频等。'},
                     {img:'/img/hx06.jpg',videoSrc:'/media/hx06.mp4',tit:'基于WebGIS的TB级倾斜摄影模型秒级加载技术',text:'TB级数据量大小的实景三维模型，也可在平台实现一键服务发布、快速服务调用、web端高效渲染。'}
                 ],
-                show:false
+                show:false,
+                videoSrc:'',
+                videoPoster:''
             }
         },
         methods:{
-            videoPlay(){
-
+            videoPlay(item){
+                this.show=true;
+                this.videoSrc=item.videoSrc;
+                this.videoPoster=item.img;
+            },
+            closeVideo(){
+                this.show=false;
             }
         }
     }
@@ -94,6 +102,14 @@
         z-index:5555;
         >video{
            width:100%;
+        }
+        .van-icon{
+            position:absolute;
+            right:0;
+            top:0;
+            font-size:25px;
+            color:white;
+            font-weight:bolder;
         }
     }
 </style>

@@ -6,19 +6,22 @@
         <div>
             <Banner :banner="homeBanner" />
             <LineColor text="核心技术"/>
-            <van-grid :border="false" :column-num="3">
+            <!-- <van-grid :border="false" :column-num="3">
                 <van-grid-item
                     v-for="(item,index) in dataA"
                     :key="index"
                 >
-                    <a @click="scroll($event,item.href)">
+                    <a>
                         <van-image :src="item.src" />
                         {{item.text}}
                     </a>
                 </van-grid-item>
-            </van-grid>
+            </van-grid> -->
+            <Center />
             <LineColor text="视频演示"/>
             <VideoList />
+            <LineColor text="选择我们"/>
+            <Grid />
         </div>
         <div class="footer">
             <Footer />
@@ -33,6 +36,8 @@ import Footer from '@/components/Footer.vue';
 import LineColor   from '@/components/LineColor.vue';
 import Square from '@/components/Square.vue';
 import VideoList from '@/components/VideoList.vue';
+import Center from '@/components/Center.vue';
+import Grid from '@/components/Grid.vue';
     export default {
         name:'Home',
         data() {
@@ -50,7 +55,9 @@ import VideoList from '@/components/VideoList.vue';
             Footer,
             LineColor,
             Square,
-            VideoList
+            VideoList,
+            Center,
+            Grid
         },
         methods:{
             scroll(e,href) {

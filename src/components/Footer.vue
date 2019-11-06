@@ -33,7 +33,8 @@
         },
         methods:{
             handleSelect(key,keypath){
-                console.log(key,keypath);
+                console.log(key);
+                this.$router.push('/'+key)
             }
         }
     }

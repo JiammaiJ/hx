@@ -6,6 +6,7 @@ import 'lib-flexible/flexible'
 import { Icon,Swipe, SwipeItem,Popup,DropdownMenu, DropdownItem,Grid, GridItem,Image,Overlay } from 'vant';
 import { Menu,MenuItem,Submenu } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import 'animate.css'
 
 // vant
 Vue.use(Icon );
