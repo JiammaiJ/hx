@@ -74,7 +74,7 @@ export default {
         flex-wrap:wrap;
         >div{
             width:50%;
-            height:200px;
+            height:230px;
             >div:nth-child(1){
                 width:100%;
                 height:63px;
