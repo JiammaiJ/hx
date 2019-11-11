@@ -76,11 +76,6 @@
         >div:nth-child(1){
             width:100%;
             height:100%;
-            // background-image: url('../../public/img/pro1.jpeg');
-            // background-size:cover;
-            // background-attachment: fixed;
-            // -webkit-background-size:cover;
-            // -webkit-background-attachment: fixed; 
             z-index:555;
             >h1{
                 color:white;

@@ -18,6 +18,11 @@ const routes = [
     {
       path:'/programme',
       component:() => import('@/views/Programme')
+    },
+    {
+      path:'/programmeItem',
+      name:'programmeItem',
+      component:() => import('@/components/ProgrammeItem')
     }
 ]
 

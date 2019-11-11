@@ -1,15 +1,12 @@
 <template>
   <div id="app">
-      <router-view />
+      <transition enter-active-class="animated zoomIn" leave-active-class="animated rotateOut">
+        <router-view />
+      </transition>
   </div>
 </template>
 
 <style lang="less">
-  .hh{
-    width:300px;
-    height:37.5px;
-    background-color:yellow;
-  }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
