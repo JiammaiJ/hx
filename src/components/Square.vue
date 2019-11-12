@@ -5,6 +5,8 @@
             <li class="back"></li>
             <li class="left"></li>
             <li class="right"></li>
+            <li class="top"></li>
+            <li class="bottom"></li>
         </ul>
     </div>
 </template>
@@ -23,7 +25,7 @@
         .box{
             position:relative;
             transform-style:preserve-3d;
-            transform: rotateY(0deg);
+            transform: rotateY(33.5deg);
             animation:5s rotate linear infinite;
             >li{
                 position:absolute;

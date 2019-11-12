@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import 'lib-flexible/flexible'
-import { Icon,Swipe, SwipeItem,Popup,DropdownMenu, DropdownItem,Grid, GridItem,Image,Overlay } from 'vant';
+import { Icon,Swipe, SwipeItem,Popup,DropdownMenu, DropdownItem,Grid, GridItem,Image,Overlay,Tab, Tabs } from 'vant';
 import { Menu,MenuItem,Submenu } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'animate.css'
@@ -16,6 +16,7 @@ Vue.use(DropdownMenu).use(DropdownItem);
 Vue.use(Grid).use(GridItem);
 Vue.use(Image);
 Vue.use(Overlay);
+Vue.use(Tab).use(Tabs);
 // element
 Vue.use(Menu).use(MenuItem);
 
