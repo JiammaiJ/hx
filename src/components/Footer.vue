@@ -33,8 +33,13 @@
         },
         methods:{
             handleSelect(key,keypath){
-                console.log(key);
-                this.$router.push('/'+key)
+                if(key==='a'){
+                    window.open('http://202.98.97.241:8081/opw/cesium-docs/examples.html#baselayer');
+                }else if(key==='b'){
+                    window.open('http://202.98.97.241:8081/opw/krpano-example');
+                }else{
+                    this.$router.push('/'+key)
+                }
             }
         }
     }

@@ -1,31 +1,32 @@
 <template>
     <div class="container">
-        <h1>{{test.tit}}</h1>
+        <h1>{{item.tit}}</h1>
         <div class="imgbox">
-            <img :src="test.src">
+            <img :src="`${publicPath}${item.src}`">
         </div>
         <div class="describe">
             <van-tabs type="card">
                 <van-tab title="亮点">
                     <div class="info">
-                        <h1>亮点</h1>
+                        <h1>Bright Spot</h1>
                         <Square />
                         <p
-                            v-for="(item,index) in test.des"
+                            v-for="(item,index) in item.des"
                             :key="index"
                         >
-                            {{item}}
+                            {{index+1}}：{{item}}
                         </p>
                     </div>
                 </van-tab>
                 <van-tab title="功能">
                     <div class="info">
-                        <h1>功能</h1>
+                        <h1>Function</h1>
+                        <Square />
                         <p
-                            v-for="(item,index) in test.func"
+                            v-for="(item,index) in item.func"
                             :key="index"
                         >
-                            {{item}}
+                            {{index+1}}：{{item}}
                         </p>
                     </div>
                 </van-tab>
@@ -40,6 +41,7 @@ import Square from '@/components/Square'
         name:'ProgrammeItem',
         data() {
             return {
+                publicPath:process.env.BASE_URL,
                 item:this.$route.params,
                 test:{
                         tit:'智慧旅游三维可视化',
@@ -54,7 +56,7 @@ import Square from '@/components/Square'
             Square
         },
         mounted() {
-            console.log(this.item);
+           
         },
         methods:{}
     }
@@ -112,6 +114,8 @@ import Square from '@/components/Square'
         >p{
             color:white;
             font-size:15px;
+            text-align:left;
+            text-indent:2em;
         }
     }
 </style>

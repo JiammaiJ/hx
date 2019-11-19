@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="square">
         <ul class="box">
             <li class="front"></li>
             <li class="back"></li>
@@ -18,7 +18,7 @@
 </script>
 
 <style scoped lang="less">
-    .container{
+    .square{
         width:80px;
         height:80px;
         margin:0 auto;
@@ -38,19 +38,19 @@
             }
             .front{
                 transform:translateZ(40px);
-                background-image: url('/img/q1.png');
+                background-image: url('../../public/img/q1.png');
             }
             .back{
                 transform:translateZ(-40px);
-                background-image: url('/img/q2.png');
+                background-image: url('../../public/img/q2.png');
             }
             .left{
                 transform: rotateY(90deg) translateZ(-40px);
-                background-image: url('/img/q3.png');
+                background-image: url('../../public/img/q3.png');
             }
             .right{
                 transform: rotateY(90deg) translateZ(40px);
-                background-image: url('/img/q4.png');
+                background-image: url('../../public/img/q4.png');
             }
         }
     }
