@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <transition enter-active-class="animated rotateIn" leave-active-class="animated rotateOut">
+      <transition enter-active-class="animated rotateIn">
         <router-view />
       </transition>
   </div>

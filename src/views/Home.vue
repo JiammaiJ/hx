@@ -42,11 +42,12 @@ import Grid from '@/components/Grid.vue';
         name:'Home',
         data() {
             return {
+                publicPath:process.env.BASE_URL,
                 homeBanner:[
                     require('../../public/img/q6.png'),require('../../public/img/q7.png'),
                     require('../../public/img/q8.png'),require('../../public/img/q9.png')
                 ],
-                dataA:[{src:'/img/gisdt.png',text:'GIS地图',href:'#gisdt'},{src:'/img/swjs.png',text:'三维技术',href:'#swjs'},{src:'/img/dsj.png',text:'大数据',href:'#dsj'}]
+                dataA:[{src:'img/gisdt.png',text:'GIS地图',href:'#gisdt'},{src:'img/swjs.png',text:'三维技术',href:'#swjs'},{src:'img/dsj.png',text:'大数据',href:'#dsj'}]
             }
         },
         components:{

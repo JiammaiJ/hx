@@ -16,7 +16,7 @@
             <van-swipe :autoplay="3000">
                 <van-swipe-item v-for="(item, index) in swipeimg" :key="index">
                     <div class="banner">
-                        <img :src="item.src" />
+                        <img :src="`${publicPath}${item.src}`" />
                     </div>
                 </van-swipe-item>
             </van-swipe>
@@ -45,8 +45,9 @@
         name:'About',
         data() {
             return {
+                publicPath:process.env.BASE_URL,
                 swipeimg:[
-                    {src:'/img/c1.jpg'},{src:'/img/c2.png'},{src:'/img/c3.jpg'},{src:'/img/c4.jpg'},{src:'/img/c5.jpg'},{src:'/img/c6.png'}
+                    {src:'img/c1.jpg'},{src:'img/c2.png'},{src:'img/c3.jpg'},{src:'img/c4.jpg'},{src:'img/c5.jpg'},{src:'img/c6.png'}
                 ]
             }
         },
@@ -54,7 +55,18 @@
             show() {
                 this.ImagePreview({
                     images: [
-                        '/img/h1.jpg','/img/h2.jpg','/img/h3.jpg','/img/h4.jpg','/img/h5.jpg','/img/h6.jpg','/img/h7.jpg','/img/h8.jpg','/img/h9.jpg','/img/h10.jpg','/img/h11.jpg','/img/h12.jpg'
+                        `${this.publicPath}img/h1.jpg`,
+                        `${this.publicPath}img/h2.jpg`,
+                        `${this.publicPath}img/h3.jpg`,
+                        `${this.publicPath}img/h4.jpg`,
+                        `${this.publicPath}img/h5.jpg`,
+                        `${this.publicPath}img/h6.jpg`,
+                        `${this.publicPath}img/h7.jpg`,
+                        `${this.publicPath}img/h8.jpg`,
+                        `${this.publicPath}img/h9.jpg`,
+                        `${this.publicPath}img/h10.jpg`,
+                        `${this.publicPath}img/h11.jpg`,
+                        `${this.publicPath}img/h12.jpg`,
                     ],
                     startPosition: 0,
                     onClose() {
